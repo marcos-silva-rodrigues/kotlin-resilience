@@ -20,6 +20,7 @@ class CircuitBreakerConfiguration {
         .permittedNumberOfCallsInHalfOpenState(3)
         .build()
 
+    @Bean
     fun getCircuitBreaker() = CircuitBreakerRegistry
         .of(getConfiguration())
         .circuitBreaker("circuit-breaker-car-service")
